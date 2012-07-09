@@ -20,7 +20,7 @@ describe Weary::Deferred do
 
     it "with a factory method" do
       deferred = described_class.new @request.perform, @struct, lambda {|model, response| response.status }
-      deferred.should eq 501
+      deferred.to_s.should eq 501.to_s
     end
   end
 
